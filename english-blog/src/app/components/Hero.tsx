@@ -1,6 +1,7 @@
+import React from 'react';
 import Image from 'next/image';
 
-export default function Hero() {
+const Hero: React.FC = () => {
   return (
     <section className="relative">
       <div className="h-96 relative">
@@ -15,4 +16,6 @@ export default function Hero() {
       </div>
     </section>
   );
-}
+};
+
+export default Hero;

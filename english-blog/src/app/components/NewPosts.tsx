@@ -1,7 +1,8 @@
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function NewPosts() {
+const NewPosts: React.FC = () => {
   return (
     <section className="container mx-auto mt-16">
       <h2 className="text-3xl font-bold mb-8">New Posts</h2>
@@ -10,16 +11,22 @@ export default function NewPosts() {
           <Image src="/new1.jpg" alt="New Post 1" width={300} height={200} />
           <h3 className="text-xl font-semibold mt-4">New Post 1</h3>
           <p className="mt-2">Brief description of the new post.</p>
-          <Link href="/posts/3"><a className="text-blue-500 mt-4 block">Read More</a></Link>
+          <Link href="/posts/3" legacyBehavior>
+            <a className="text-blue-500 mt-4 block">Read More</a>
+          </Link>
         </div>
         <div className="border p-4 shadow">
           <Image src="/new2.jpg" alt="New Post 2" width={300} height={200} />
           <h3 className="text-xl font-semibold mt-4">New Post 2</h3>
           <p className="mt-2">Brief description of the new post.</p>
-          <Link href="/posts/4"><a className="text-blue-500 mt-4 block">Read More</a></Link>
+          <Link href="/posts/4" legacyBehavior>
+            <a className="text-blue-500 mt-4 block">Read More</a>
+          </Link>
         </div>
         {/* Add more posts */}
       </div>
     </section>
   );
-}
+};
+
+export default NewPosts;
