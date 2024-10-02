@@ -4,7 +4,8 @@ export default function Hero() {
   return (
     <section className="relative">
       <div className="h-96 relative">
-        <Image src="/hero-image.jpg" alt="Hero Image" layout="fill" objectFit="cover" />
+        {/* Use the new "fill" and "style" properties */}
+        <Image src="/hero-image.jpg" fill alt="Hero Image" style={{ objectFit: 'cover' }} />
       </div>
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="text-center text-white">
