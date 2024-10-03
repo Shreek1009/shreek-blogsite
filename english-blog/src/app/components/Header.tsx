@@ -1,46 +1,52 @@
+// components/Header.tsx
 import React from 'react';
 import Link from 'next/link';
 
 const Header: React.FC = () => {
   return (
-    <header className="bg-white shadow-md">
-      <nav className="container mx-auto p-6 flex justify-between items-center">
-        <div className="text-3xl font-bold text-gray-800">Blog Name</div>
+    <header className="bg-white shadow-md py-4">
+      <nav className="container mx-auto px-6 flex justify-between items-center">
+        {/* Logo */}
+        <div className="flex items-center">
+          <img src="/logo.png" alt="Blog Logo" className="w-12 h-12 mr-3" />
+          <span className="text-3xl font-bold text-gray-800">Blog Name</span>
+        </div>
+
+        {/* Navigation */}
         <ul className="flex space-x-6 text-lg">
-          {/* Using Link with legacy behavior */}
           <li>
             <Link href="/" legacyBehavior>
-              <a>Home</a>
+              <a className="hover:text-blue-500 transition-colors duration-300">Home</a>
             </Link>
           </li>
           <li>
             <Link href="/featured" legacyBehavior>
-              <a>Featured Posts</a>
+              <a className="hover:text-blue-500 transition-colors duration-300">Featured Posts</a>
             </Link>
           </li>
           <li>
             <Link href="/new-posts" legacyBehavior>
-              <a>New Posts</a>
+              <a className="hover:text-blue-500 transition-colors duration-300">New Posts</a>
             </Link>
           </li>
           <li>
             <Link href="/all-posts" legacyBehavior>
-              <a>All Posts</a>
+              <a className="hover:text-blue-500 transition-colors duration-300">All Posts</a>
             </Link>
           </li>
           <li>
             <Link href="/about" legacyBehavior>
-              <a>About Us</a>
+              <a className="hover:text-blue-500 transition-colors duration-300">About Us</a>
             </Link>
           </li>
           <li>
             <Link href="/contact" legacyBehavior>
-              <a>Contact Us</a>
+              <a className="hover:text-blue-500 transition-colors duration-300">Contact Us</a>
             </Link>
           </li>
           <li>
             <Link href="http://website.com" legacyBehavior>
-              <a>ಕನ್ನಡ</a>
+              <a className="hover:text-blue-500 transition-colors duration-300">ಕನ್ನಡ</a>
             </Link>
           </li>
         </ul>
